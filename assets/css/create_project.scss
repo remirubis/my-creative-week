@@ -1,0 +1,234 @@
+@import "variables";
+
+form {
+	.name {
+		background-color: $main;
+		padding: 30px 30px;
+		margin-bottom: 20px;
+		label {
+			font-size: 1.6rem;
+			font-weight: bold;
+			font-family: Ubuntu;
+			text-transform: uppercase;
+		}
+		.bar {
+			display: flex;
+			flex-direction: row;
+			margin-top: 10px;
+			input {
+				border: none;
+				font-size: 1.2rem;
+				font-weight: bold;
+				height: 40px;
+				width: 85%;
+			}
+			select {
+				border: none;
+				border-right: 1px solid $secondary;
+				padding: 0 10px;
+				width: 15%;
+				font-size: 1.2rem;
+				font-family: inherit;
+			}
+		}
+	}
+	.info-project {
+		display: flex;
+		justify-content: space-between;
+		background-color: $secondary;
+		color: $white;
+		padding: 30px 30px;
+		div {
+			width: 40%;
+		}
+		.date {
+			width: 20%;
+			display: flex;
+			flex-direction: column;
+			label {
+				margin-bottom: 5px;
+			}
+			input {
+				font-weight: bold;
+				margin-bottom: 10px;
+				font-size: 1.1rem;
+				color: $secondary;
+			}
+		}
+	}
+	.desc-project {
+		display: flex;
+		flex-direction: column;
+		margin: 30px 0;
+		h2 {
+			font-weight: bold;
+		}
+		textarea {
+			resize: vertical;
+			height: 150px;
+			border: 1px solid $secondary;
+			font-family: inherit;
+			font-size: 1rem;
+			padding: 20px;
+		}
+	}
+	.students-projects {
+		margin: 30px 0;
+		h2 {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+		.params {
+			background-color: $secondary;
+			color: $white;
+			padding: 20px;
+			margin-bottom: 20px;
+			h3 {
+				font-size: 1.2rem;
+				font-weight: bold;
+			}
+			#line {
+				display: flex;
+				p {
+					width: 75%;
+				}
+				div {
+					width: 15%;
+					label {
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+					input:checked {
+						color: $main;
+					}
+				}
+			}
+		}
+		.add_project {
+			background-color: $main;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			label {
+				font-size: 1.2rem;
+				margin-bottom: 7px; 
+			}
+			textarea {
+				height: 150px !important;
+				resize: vertical;
+			}
+			select {
+				padding:  0 0 0 15px !important;
+			}
+			input, textarea, select {
+				margin-bottom: 15px;
+				padding: 15px;
+				height: 35px;
+				border: none;
+				outline: none;
+				border: 2px solid $main;
+				font-family: inherit;
+				font-size: 1rem;
+				color: $secondary;
+				&:focus {
+					border: 2px solid $secondary;
+				}
+			}
+			.col {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				div {
+					width: 48%;
+					input,select {
+						width: 100%;
+					}
+				}
+			}
+			.filedwl {
+				margin: 30px 40px;
+					justify-content: flex-end;
+				.btn {
+					background-color: $secondary;
+					&:hover {
+						background-color: $mds_2;
+					}
+				}
+			}
+			& > .btn {
+				width: 300px;
+				padding: 10px 5px;
+				font-size: 1.2rem !important;
+			}
+		}
+	}
+	.col2 {
+		margin: 40px auto 20px;
+		display: flex;
+		justify-content: space-between;
+		button, p {
+			width: 450px !important;
+		}
+		.btn {
+			font-size: 1.4rem;
+			width: 100%;
+			background-color: $mds_2;
+			&:hover {
+				background-color: $secondary;
+			}
+		}
+		button {
+			background-color: $validation !important;
+		}
+	}
+}
+h2 {
+	font-size: 1.3rem;
+	font-family: Ubuntu;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+input {
+	font-family: inherit;
+	color: inherit;
+	padding-left: 15px;
+	&::placeholder {
+		opacity: .8;
+		font-weight: normal;
+	}
+}
+.filedwl {
+	display: flex;
+	align-items: center;
+	margin-top:20px;
+	.btn {
+		width: 300px;
+		font-size: 1.1rem;
+		padding: 10px 5px;
+		background-color: $mds_2;
+		&:hover {
+			background-color: $secondary;
+		}
+	}
+	p {
+		margin-left: 40px;
+		font-size: 1rem;
+		span {
+			font-weight: bold;
+		}
+	}
+	#clear {
+		cursor: pointer;
+		span {
+			display: none;
+		}
+	}
+	input {
+		display: none;
+	}
+	#del,#del1 {
+		display: none;
+	}
+}

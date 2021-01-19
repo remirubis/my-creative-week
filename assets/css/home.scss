@@ -1,0 +1,100 @@
+@import "variables";
+
+#top {
+	height: 540px;
+	position: relative;
+	color: $white;
+	background: url('/assets/img/bk.webp') no-repeat center/100%;
+	&::before {
+		position: absolute;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: $black_reduce;
+		z-index: 0;
+	}
+	.wrapper {
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		top: 50%;
+    transform: translate(-50%, -50%);
+		h1 {
+			margin-bottom: 60px;
+		}
+		p {
+			font-size: 2.4rem;
+			text-align: center;
+		}
+		#students {
+			font-size: 1.8rem;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		#cta {
+			width: 30%;
+			margin: auto;
+			.btn {
+				background-color: $mds_2;
+				&:hover {
+					background-color: $secondary;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+#search-area {
+	background-color: $main;
+	padding: 60px 0;
+	h2 {
+		font-size: 2rem;
+		font-family: Ubuntu;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 20px !important;
+		text-align: center;
+	}
+}
+
+#last {
+	h2 {
+		font-size: 2rem;
+		font-family: Ubuntu;
+		font-weight: bold;
+		letter-spacing: 0.3rem;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 60px 0 30px 0;
+		padding-bottom: 20px;
+	}
+	div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	& > p {
+		width: 400px;
+		margin: auto;
+	}
+}
+
+@media (max-width: 820px) {
+	#top {
+		#cta {
+			width: 50% !important;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	#top {
+		h1 {
+			margin-bottom: 20px !important;
+		}
+		#cta {
+			width: 90% !important;
+		}
+	}
+}
